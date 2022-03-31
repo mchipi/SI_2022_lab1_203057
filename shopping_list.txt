@@ -1,5 +1,7 @@
 flour x 1
 avocados x 5
 juice x 5
-chips x 9
-biscuits x 13
+smoki x 9
+biscuits x 11
+tuna x 1
+
