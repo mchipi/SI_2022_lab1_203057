@@ -1,0 +1,130 @@
+git clone https://github.com/mchipi/SI_2022_lab1_203057.git
+------------------------------------------------------------
+cd .\SI_2022_lab1_203057
+------------------------------------------------------------
+copy con shopping_list.txt
+flour
+avocados
+juice
+chips
+biscuits
+^Z
+------------------------------------------------------------
+git add shopping_list.txt
+------------------------------------------------------------
+git commit -m "Add 5 items to the shopping list"
+------------------------------------------------------------
+copy con shopping_list.txt
+flour x 1
+Overwrite shopping_list.txt? (Yes/No/All): y
+avocados x 3
+juice x 5
+chips x 9
+biscuits x 11
+^Z
+------------------------------------------------------------
+git add shopping_list.txt
+------------------------------------------------------------
+git commit -m "Add quantities to the items"
+------------------------------------------------------------
+git log
+commit 1f95412d8763b112c4db7654808297f54788b90c (HEAD -> master, branch2, branch1)
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:05:55 2022 +0200
+
+    Add quantities to the items
+
+commit 1bed19cb5ac736b317364eb31937168b94401bdb
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:02:47 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 59b7d06b01e54bc78e84df627e0b6e23a8dfa792 (origin/master, origin/HEAD)
+Author: mchipi <100198968+mchipi@users.noreply.github.com>
+Date:   Thu Mar 31 15:55:12 2022 +0200
+
+    Initial commit
+------------------------------------------------------------
+git pull
+------------------------------------------------------------
+git push
+------------------------------------------------------------
+git checkout branch1
+------------------------------------------------------------
+git add shopping_list.txt
+------------------------------------------------------------
+git commit -m "Change quantity of item #5"
+------------------------------------------------------------
+git checkout master
+------------------------------------------------------------
+git add shopping_list.txt
+------------------------------------------------------------
+git commit -m "Change quantity of item #2"
+------------------------------------------------------------
+git log
+commit 46cdc118fe2ddfcd116bcd0c5771cae7f2bbbad5 (HEAD -> branch2)
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:17:08 2022 +0200
+
+    Modify item #4
+
+commit 1f95412d8763b112c4db7654808297f54788b90c
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:05:55 2022 +0200
+
+    Add quantities to the items
+
+commit 1bed19cb5ac736b317364eb31937168b94401bdb
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:02:47 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 59b7d06b01e54bc78e84df627e0b6e23a8dfa792
+Author: mchipi <100198968+mchipi@users.noreply.github.com>
+Date:   Thu Mar 31 15:55:12 2022 +0200
+
+    Initial commit
+------------------------------------------------------------
+git add shopping_list.txt
+------------------------------------------------------------
+git commit --amend -m "Modify item #4 and add item #6"
+------------------------------------------------------------
+git log
+commit f640a302602c64d2c8a578bb8942f3dbb9f2a89a (HEAD -> branch2)
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:17:08 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 1f95412d8763b112c4db7654808297f54788b90c
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:05:55 2022 +0200
+
+    Add quantities to the items
+
+commit 1bed19cb5ac736b317364eb31937168b94401bdb
+Author: Marija Chipishkova <mcipiskova@gmail.com>
+Date:   Thu Mar 31 16:02:47 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 59b7d06b01e54bc78e84df627e0b6e23a8dfa792
+Author: mchipi <100198968+mchipi@users.noreply.github.com>
+Date:   Thu Mar 31 15:55:12 2022 +0200
+
+    Initial commit
+------------------------------------------------------------
+git checkout master
+------------------------------------------------------------
+git merge branch1 //uspesno spojuvanje so ort, nema konflikt
+------------------------------------------------------------
+git merge branch2 //se javuva konflikt
+//racno gi izbrisav liniite so konflikt vo .txt dokumentot, po sto go zacuvav istiot
+------------------------------------------------------------
+git add shopping_list.txt
+------------------------------------------------------------
+git commit -m "Conflict resolved" //uspesno commitnato
+------------------------------------------------------------
+git merge branch2 //already up to date
